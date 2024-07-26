@@ -3,7 +3,7 @@ import { Navbar } from './Navbar'
 import About from "./pages/About"
 import Work from "./pages/Work"
 import Contact from "./pages/Contact"
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<About/>} />
+        <Route path="/" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
