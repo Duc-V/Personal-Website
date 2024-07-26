@@ -1,0 +1,72 @@
+/* Base styles for all screens */
+.contact-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+form {
+    width: 50%;
+    padding: 1rem;
+    background-color: #ffe57c;
+    border: 1.5px solid black;
+    box-shadow: 10px 10px black;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1.5px solid black;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3c3c3c;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        margin-top: 10rem;
+        flex-direction: column; /* Stack form vertically */
+        align-items: center; /* Center the form horizontally */
+        padding: 1rem; /* Adjust padding for mobile */
+    }
+
+    form {
+        width: 100%; /* Make form take full width on mobile */
+        max-width: 500px; /* Optional: limit max width for large screens */
+        box-shadow: 5px 5px black; /* Reduced shadow size for mobile */
+    }
+
+    textarea {
+        height: 80px; /* Adjust height for smaller screens */
+    }
+
+    input[type="submit"] {
+        font-size: 14px; /* Slightly smaller font size for mobile */
+    }
+}

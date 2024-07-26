@@ -1,0 +1,26 @@
+/* Apply a more comprehensive reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Additional :root styles if necessary */
+:root {
+  /* Custom properties or other global styles */
+}
+
+/* Additional body styles if necessary */
+body {
+  /* Add other body styles here */
+}

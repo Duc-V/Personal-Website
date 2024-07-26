@@ -1,0 +1,152 @@
+/* Base styles for all screens */
+.about {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "intro skillset";
+    height: 80%;
+    background-color: #fef5b7;;
+}
+
+.intro {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    padding: 10%;
+}
+
+.text {
+    font-size: 1.5rem;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.location p {
+    background-color: black;
+    color: #ffe57c;
+}
+
+.reach-out {
+    display: flex;
+    gap: 10px;
+}
+
+.resume {
+    font-weight: bold;
+    border: 1.5px solid black;
+    height: 3rem;
+    width: 11rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 7px 7px black;
+    background-color: #ffe57c;
+}
+
+.download-icon {
+    display: none;
+}
+
+.resume:hover .download-icon {
+    display: flex;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+    }
+    to { 
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to { 
+        transform: translateX(0);
+    }
+}
+
+.skillset {
+    padding-top: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slide-wrapper {
+    margin-bottom: 2rem;
+}
+
+.slide-wrapper:hover .slide {
+    animation-play-state: paused;
+}
+
+.slide-top {
+    background-color: black;
+    display: inline-block;
+    animation: 10s slide-left infinite linear;
+}
+
+.slide-bot {
+    background-color: black;
+    display: inline-block;
+    animation: 10s slide-right infinite linear;
+}
+
+.slide > * {
+    font-size: 4rem;
+    color: #ffe57c;
+    padding: 0 1rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "intro"
+            "skillset";
+        height: auto;
+    }
+
+    .intro h1 {
+        font-size: 4rem;
+    }
+
+    .about-content {
+        padding: 5%;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+
+    .location {
+        font-size: 1.2rem;
+    }
+
+    .resume {
+        width: auto;
+        height: 2.5rem;
+    }
+
+    .slide > * {
+        font-size: 2rem;
+    }
+}

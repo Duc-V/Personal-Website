@@ -1,0 +1,78 @@
+/* Base styles for all screens */
+nav {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10rem;
+}
+
+nav ul {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0; /* Optional: removes default padding */
+    margin: 0;
+    gap: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    border: 1px solid black;
+    width: 10rem;
+    height: 3rem;
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items: center; /* Added */
+}
+
+.link {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the link takes up the full width of the li */
+    height: 100%; /* Ensure the link takes up the full height of the li */
+    text-decoration: none; /* Removes the underline */
+}
+
+.link:hover {
+    box-shadow: 5px 5px black;
+    background-color: #ffe57c;
+}
+
+.active {
+    box-shadow: 5px 5px black;
+    background-color: #ffe57c;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    nav {
+        height: auto;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul {
+        
+        gap: 1rem;
+        margin-top: 1rem; /* Optional: adds some space at the top */
+    }
+
+    li {
+        border: 1px solid black;
+        width: 7rem; /* Make the list items fit their content */
+        height: 3rem; /* Allow height to adjust with content */
+    }
+
+    .link {
+        padding: 1rem 2rem; /* Add some padding for better touch targets */
+    }
+}
